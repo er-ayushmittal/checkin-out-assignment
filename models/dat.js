@@ -1,0 +1,39 @@
+const mongoose=require('mongoose');
+const dataschema=new mongoose.Schema({
+    name:{
+        type:String,
+        required:true,
+        trim:true,
+        default:"lol",
+        required:true
+    },
+    email:{
+        type:String,
+        required:true,
+        trim:true,
+        required:true
+    },
+    phone:{
+        type:String,
+        trim:true,
+        required:true
+    },
+    time:{
+        type:String,
+    },
+    date:{
+        type:String,
+    },
+    couth:{
+        type:String,
+    },
+    coutm:{
+        type:String,
+    },
+    status:{
+        type:String,
+        default:"Present"
+    }
+});
+const Data=mongoose.model('Data',dataschema);
+module.exports=Data;
