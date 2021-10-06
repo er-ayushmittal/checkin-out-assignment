@@ -113,6 +113,6 @@ function sendexmail(email,name){
   .catch((err)=>console.log(err.message)+"error");
 }
 
-app.listen(3000,(req,res)=>{
-    console.log("UP AT 3000");
+app.listen(process.env.PORT,(req,res)=>{
+    console.log("UP AT "+ process.env.PORT);
 })
