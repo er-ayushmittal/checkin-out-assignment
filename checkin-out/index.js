@@ -22,7 +22,7 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname,'public')))
 
 app.get("/",(req,res)=>{
-    res.send("please go on localhost:3000/home");
+    res.redirect('/home');
 })
 
 app.get('/home',async (req,res)=>{
